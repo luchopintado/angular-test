@@ -1,11 +1,11 @@
 <section class="user-summary">
     <div class="circle">
-        <img src="./assets/img/avatar-01.jpg" alt="John Doe" />
+        <img src="./assets/img/avatar-01.jpg" [alt]="name" />
     </div>
     <div class="content">
-        <h5>Homero Simpson</h5>
+        <h5>{{ summary.name || 'Nombres y apellidos' }}</h5>
         <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic unde autem iure est debitis alias soluta odit? Dolore, perspiciatis? Nostrum, optio quis reiciendis ab porro voluptatum fugit saepe veniam provident.
+            {{ summary.bio || 'Aquí irá la biografía' }}
         </p>
     </div>
 </section>

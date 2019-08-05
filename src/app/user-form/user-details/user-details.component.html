@@ -3,12 +3,6 @@
 
     <div class="form-container">
         <form [formGroup]="formGroup">
-            <p>
-                Value: {{ formGroup.value | json }}
-                Is valid? {{ formGroup.valid }}
-            </p>
-            <hr />
-
             <mat-form-field>
                 <input matInput placeholder="Full name *" formControlName="name">
             </mat-form-field>
