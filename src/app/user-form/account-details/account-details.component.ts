@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { accountDetailsValidator, mustMatch } from './validators';
 
 @Component({
   selector: 'app-account-details',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountDetailsComponent implements OnInit {
 
-  constructor() { }
+  formGroup: FormGroup;
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.formGroup = this.fb.group(accountDetailsValidator, {
+      validator: mustMatch('password', 'confirmPassword')
+    });
   }
 
 }

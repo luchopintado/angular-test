@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserSummaryComponent } from './user-form/user-summary/user-summary.component';
 import { UserDetailsComponent } from './user-form/user-details/user-details.component';
 import { AccountDetailsComponent } from './user-form/account-details/account-details.component';
 
 import { MaterialModule } from './material.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { MaterialModule } from './material.module';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

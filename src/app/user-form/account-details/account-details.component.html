@@ -2,26 +2,29 @@
     <h3>Account details</h3>
 
     <div class="form-container">
-        <mat-form-field>
-            <input matInput placeholder="Username *">
-        </mat-form-field>
+        <form [formGroup]="formGroup">
 
-        <mat-form-field>
-            <input matInput placeholder="Username *">
-        </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Username *" formControlName="username">
+            </mat-form-field>
 
-        <mat-form-field>
-            <input matInput type="password" placeholder="Password *">
-        </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Email *" formControlName="email">
+            </mat-form-field>
 
-        <mat-form-field>
-            <input matInput type="password" placeholder="Confirm Password *">
-        </mat-form-field>
+            <mat-form-field>
+                <input matInput type="password" placeholder="Password *" formControlName="password">
+            </mat-form-field>
 
-        <mat-checkbox>I accept terms and conditions</mat-checkbox>
+            <mat-form-field>
+                <input matInput type="password" placeholder="Confirm Password *" formControlName="confirmPassword">
+            </mat-form-field>
 
-        <div class="div-button">
-            <button type="button" mat-raised-button disabled color="primary">Submit</button>
-        </div>
+            <mat-checkbox formControlName="terms">I accept terms and conditions</mat-checkbox>
+
+            <div class="div-button">
+                <button type="button" mat-raised-button [disabled]="!formGroup.valid" color="primary">Submit</button>
+            </div>
+        </form>
     </div>
 </section>
