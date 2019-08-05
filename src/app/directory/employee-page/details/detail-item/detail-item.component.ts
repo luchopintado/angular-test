@@ -8,10 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 export class DetailItemComponent implements OnInit {
   @Input() type = '';
   @Input() value = '';
+  @Input() lastItem = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  getBorderClass() {
+    return this.lastItem ? '' : 'item-border';
+  }
 }

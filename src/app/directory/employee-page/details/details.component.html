@@ -2,9 +2,10 @@
     <mat-nav-list>
         <app-detail-info></app-detail-info>
         <app-detail-item
-            *ngFor="let item of contactTypes"
+            *ngFor="let item of contactTypes; let i = index"
             [value]="item.value"
             [type]="item.type"
+            [lastItem]="i === contactTypes.length - 1"
         ></app-detail-item>
     </mat-nav-list>
 </div>

@@ -1,4 +1,4 @@
-<mat-list-item class="item-border">
+<mat-list-item [ngClass]="{'item-border': !lastItem}">
     <h3 matLine>{{ type }}</h3>
     <p matLine>
         <span class="title">{{ value }}</span>
