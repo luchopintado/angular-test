@@ -5,7 +5,7 @@ import { MaterialDirectoryModule } from '../shared/material-directory.module';
 
 import { DirectoryComponent } from './directory.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { HeaderComponent } from './shared/header/header.component';
+import { HeaderComponent } from './header/header.component';
 import { SearchbarComponent } from './home-page/searchbar/searchbar.component';
 import { EmployeeListComponent } from './home-page/employee-list/employee-list.component';
 import { EmployeeListItemComponent } from './home-page/employee-list/employee-list-item/employee-list-item.component';
