@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MaterialModule } from '../material.module';
+
+import { MaterialModule } from '../shared/material.module';
 
 import { UserFormComponent } from './user-form.component';
 import { UserSummaryComponent } from './user-summary/user-summary.component';
