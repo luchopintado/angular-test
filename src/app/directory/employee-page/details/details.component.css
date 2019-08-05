@@ -1,0 +1,9 @@
+.detail {
+    padding: 1em;
+}
+mat-nav-list {
+    border: 1px solid #e1e1e1;
+    border-radius: .72em;
+}
+
+

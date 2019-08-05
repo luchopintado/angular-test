@@ -1,0 +1,7 @@
+span {
+    font-size: .9em;
+}
+.fill-remaining-spance {
+    flex: 1 1 auto;
+    text-align: center;
+}

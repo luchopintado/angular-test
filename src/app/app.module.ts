@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { UserFormModule } from './user-form/user-form.module';
+import { DirectoryModule } from './directory/directory.module';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { UserFormModule } from './user-form/user-form.module';
     BrowserModule,
     BrowserAnimationsModule,
     UserFormModule,
+    DirectoryModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

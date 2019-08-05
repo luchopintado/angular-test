@@ -12,4 +12,7 @@ export class EmployeeListItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  handleClick() {
+    console.log('click');
+  }
 }

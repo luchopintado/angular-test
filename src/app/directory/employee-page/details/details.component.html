@@ -1,3 +1,10 @@
-<p>
-  details works!
-</p>
+<div class="detail">
+    <mat-nav-list>
+        <app-detail-info></app-detail-info>
+        <app-detail-item
+            *ngFor="let item of contactTypes"
+            [value]="item.value"
+            [type]="item.type"
+        ></app-detail-item>
+    </mat-nav-list>
+</div>

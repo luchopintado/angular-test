@@ -1,0 +1,20 @@
+.info {
+    height: 100px !important;
+    border-bottom: 1px solid #e1e1e1;
+}
+.info img{
+    width: 80px;
+    height: 80px;
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+.info h3 {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.info .title {
+    font-size: 1em;
+    color: #c1c1c1;
+    display: inline-block;
+    margin-top: 0.24em;
+}
