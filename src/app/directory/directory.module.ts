@@ -14,6 +14,7 @@ import { DetailsComponent } from './employee-page/details/details.component';
 import { IconComponent } from './employee-page/details/icon.component';
 import { DetailItemComponent } from './employee-page/details/detail-item/detail-item.component';
 import { DetailInfoComponent } from './employee-page/details/detail-info/detail-info.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [
@@ -32,6 +33,7 @@ import { DetailInfoComponent } from './employee-page/details/detail-info/detail-
     imports: [
         CommonModule,
         MaterialDirectoryModule,
+        RouterModule,
     ],
     exports: [
         DirectoryComponent,

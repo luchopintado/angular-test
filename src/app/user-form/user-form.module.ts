@@ -10,6 +10,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 
 import { SummaryService } from './user-details/summary.service';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import { SummaryService } from './user-details/summary.service';
         CommonModule,
         MaterialModule,
         ReactiveFormsModule,
+        RouterModule,
     ],
     exports: [
         UserFormComponent,
