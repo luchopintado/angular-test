@@ -1,3 +1,47 @@
-<p>
-  user-details works!
-</p>
+<section class="user-details">
+    <h3>User details</h3>
+
+    <div class="form-container">
+        <mat-form-field>
+            <input matInput placeholder="Full name *">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Your birthday*">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-select placeholder="Gender">
+                <mat-option value="male">Male</mat-option>
+                <mat-option value="female">Female</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div class="phone-field">
+            <mat-form-field>
+                <mat-select placeholder="Country">
+                    <mat-option value="peru">Peru</mat-option>
+                    <mat-option value="uruguay">Uruguay</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Phone *">
+                <mat-hint><strong>Mobile:</strong> 094 231 234</mat-hint>
+                <mat-hint align="end"><strong>Fixed:</strong> 2 123 1234</mat-hint>
+            </mat-form-field>
+        </div>
+
+        <mat-form-field>
+            <textarea matInput placeholder="Bio" #txtBio maxlength="256"></textarea>
+            <mat-hint>Tell us about yourself</mat-hint>
+            <mat-hint align="end">{{txtBio.value?.length || 0}}/256</mat-hint>
+        </mat-form-field>
+
+        <div class="div-button">
+            <button type="button" mat-raised-button disabled color="primary">Submit</button>
+        </div>
+    </div>
+</section>

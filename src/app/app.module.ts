@@ -8,6 +8,8 @@ import { UserSummaryComponent } from './user-form/user-summary/user-summary.comp
 import { UserDetailsComponent } from './user-form/user-details/user-details.component';
 import { AccountDetailsComponent } from './user-form/account-details/account-details.component';
 
+import { MaterialModule } from './material.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { AccountDetailsComponent } from './user-form/account-details/account-det
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,12 @@
+
+.form-grid {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 2fr 5fr 5fr;
+    grid-column-gap: 2rem;
+}
+.form-grid > section {
+    min-height: 20em;
+}
+
+
