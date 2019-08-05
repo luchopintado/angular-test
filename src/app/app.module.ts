@@ -12,13 +12,14 @@ import { AccountDetailsComponent } from './user-form/account-details/account-det
 import { MaterialModule } from './material.module';
 import { SummaryService } from './user-form/user-details/summary.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     UserFormComponent,
     UserSummaryComponent,
     UserDetailsComponent,
-    AccountDetailsComponent
+    AccountDetailsComponent,
   ],
   imports: [
     BrowserModule,
