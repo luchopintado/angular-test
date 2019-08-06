@@ -1,21 +1,44 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { EmployeeService } from '../../../shared/employee.service';
+import { Employee } from 'src/app/shared/employee.model';
 
 @Component({
-  selector: 'app-details',
-  templateUrl: './details.component.html',
-  styleUrls: ['./details.component.css']
+    selector: 'app-details',
+    templateUrl: './details.component.html',
+    styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-  contactTypes = [
-    { type: 'Call Office', value: '781-000-0002' },
-    { type: 'Call Mobile', value: '617-000-0002' },
-    { type: 'SMS', value: '617-000-0002' },
-    { type: 'Email', value: 'jtaylor@fakemail.com' },
-  ];
+    employee: Employee;
+    contactTypes = [];
 
-  constructor() { }
+    constructor(
+        private route: ActivatedRoute,
+        private employeeService: EmployeeService,
+    ) { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.getEmployee();
+    }
 
+    getEmployee() {
+        const id = +this.route.snapshot.paramMap.get('id');
+        this
+            .employeeService
+            .getEmployee(id)
+            .subscribe(employee => {
+                this.employee = employee;
+                this.contactTypes = this.getContactTypes(employee);
+            });
+    }
+
+    getContactTypes(employee: Employee) {
+        return [
+            { type: 'Call Office', value: employee.phoneOffice },
+            { type: 'Call Mobile', value: employee.phoneMobile },
+            { type: 'SMS', value: employee.phoneMobile },
+            { type: 'Email', value: employee.email },
+        ];
+    }
 }

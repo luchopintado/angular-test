@@ -12,7 +12,7 @@ const appRoutes: Routes = [
     { path: 'user-form', component: UserFormComponent },
     { path: 'directory', component: DirectoryComponent, children: [
         { path: '', component: HomePageComponent },
-        { path: 'employee', component: EmployeePageComponent },
+        { path: 'employee/:id', component: EmployeePageComponent },
     ] }
 ];
 

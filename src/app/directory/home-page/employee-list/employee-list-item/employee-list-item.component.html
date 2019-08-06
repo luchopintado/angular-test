@@ -1,9 +1,9 @@
 <mat-action-list>
-    <a mat-list-item routerLink="/directory/employee">
-        <img matListAvatar src="./assets/img/avatar-01.jpg" alt="Employee Name">
-        <h3 matLine> Employee Name </h3>
+    <mat-list-item routerLink="/directory/employee/{{employee.id}}">
+        <img matListAvatar src="./assets/img/{{employee.avatar}}" [alt]="employee.name">
+        <h3 matLine>{{ employee.name }}</h3>
         <p matLine>
-            <span class="title"> Employee Title or Rol </span>
+            <span class="title">{{ employee.title }}</span>
         </p>
-    </a>
+    </mat-list-item>
 </mat-action-list>

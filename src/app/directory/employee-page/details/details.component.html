@@ -1,6 +1,6 @@
 <div class="detail">
     <mat-nav-list>
-        <app-detail-info></app-detail-info>
+        <app-detail-info [employee]="employee"></app-detail-info>
         <app-detail-item
             *ngFor="let item of contactTypes; let i = index"
             [value]="item.value"

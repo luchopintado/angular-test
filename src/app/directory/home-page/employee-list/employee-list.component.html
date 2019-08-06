@@ -1,8 +1,6 @@
 <div class="list">
-  <app-employee-list-item></app-employee-list-item>
-  <app-employee-list-item></app-employee-list-item>
-  <app-employee-list-item></app-employee-list-item>
-  <app-employee-list-item></app-employee-list-item>
-  <app-employee-list-item></app-employee-list-item>
-  <app-employee-list-item></app-employee-list-item>
+    <app-employee-list-item
+        *ngFor="let employee of employees"
+        [employee]="employee"
+    ></app-employee-list-item>
 </div>
