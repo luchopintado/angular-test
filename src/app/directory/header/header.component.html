@@ -1,9 +1,9 @@
 <mat-toolbar>
-    <button mat-icon-button>
+    <button *ngIf="showBack" mat-icon-button routerLink="/directory" >
         <mat-icon>
             <app-icon></app-icon>
         </mat-icon>
     </button>
-    <span class="fill-remaining-spance">{{ title }}</span>
+    <span class="fill-remaining-spance" [class.withBackButton]="showBack">{{ title }}</span>
     <span></span>
 </mat-toolbar>

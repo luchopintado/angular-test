@@ -1,9 +1,12 @@
 span {
     font-size: .9em;
 }
+.withBackButton {
+  margin-left: -48px;
+}
 .fill-remaining-spance {
-    flex: 1 1 auto;
     text-align: center;
+    flex: 1 1 auto;
 }
 mat-icon {
   transform: scaleY(2) scaleX(-2);
